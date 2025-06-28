@@ -26,3 +26,25 @@ python scripts/search.py --name "李白"
 ```
 
 Results will be stored under the `index/` directory or printed to the console.
+
+## Usage
+
+The following commands illustrate a typical workflow:
+
+```bash
+# 先预处理
+python scripts/preprocess.py --data-dir ./data --index-dir ./index
+# 搜索示例
+python scripts/search.py --char2 清 --char3 风 --tone2 2 --source poetry --distance adjacent
+```
+
+An example snippet of the output looks like:
+
+```text
+西地锦 (ci)
+寂寞悲秋怀抱。
+掩重门悄悄。
+清风皓月，朱阑画阁，双鸳池沼。
+...
+```
+
