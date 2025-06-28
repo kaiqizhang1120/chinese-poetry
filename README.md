@@ -2,6 +2,14 @@
 
 This project provides a small scaffold for working with the Chinese Poetry corpus. It focuses on building simple name search utilities over the ancient texts.
 
+## Installation
+
+```bash
+git clone https://github.com/kaiqizhang1120/chinese-poetry.git
+cd chinese-poetry
+pip install -r requirements.txt
+```
+
 ## Purpose
 
 To demonstrate how to organise scripts and data for querying names within the classic poetry collections contained in this repository.
@@ -32,19 +40,17 @@ Results will be stored under the `index/` directory or printed to the console.
 The following commands illustrate a typical workflow:
 
 ```bash
-# 先预处理
 python scripts/preprocess.py --data-dir ./data --index-dir ./index
-# 搜索示例
 python scripts/search.py --char2 清 --char3 风 --tone2 2 --source poetry --distance adjacent
 ```
 
-An example snippet of the output looks like:
+Expected output is similar to:
 
 ```text
 西地锦 (ci)
 寂寞悲秋怀抱。
 掩重门悄悄。
-清风皓月，朱阑画阁，双鸳池沼。
+\x1b[31m清\x1b[0m\x1b[31m风\x1b[0m皓月，朱阑画阁，双鸳池沼。
 ...
 ```
 
