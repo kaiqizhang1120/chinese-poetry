@@ -1,1 +1,7 @@
-pytest==5.3.2
+arduino
+复制
+编辑
+pypinyin
+click
+pytest
+tinydb
