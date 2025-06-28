@@ -79,7 +79,14 @@ def main(data_dir: str, index_dir: str) -> None:
                             None,
                         )
                         if digit:
-                            tone_digit = int(digit)
+                            try:
+                                tone_digit = int(digit)
+                            except ValueError:
+                                import unicodedata
+                                try:
+                                    tone_digit = int(unicodedata.digit(digit))
+                                except Exception:
+                                    tone_digit = 0
 
                     char_index[ch].append(
                         {
